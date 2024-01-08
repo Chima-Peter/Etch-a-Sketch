@@ -12,3 +12,38 @@ body {
 .head-container h1 {
     font-size: 60px;
 }
+
+
+
+
+.etchContainer {
+    display: flex;
+    flex: auto;
+    padding: 30px 40px;
+}
+.controlsContainer {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+.controlsContainer button {
+    background-color: lightcyan;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 3em;
+    margin: 10px 10px 10px 0;
+    padding: 0;
+    color: black;
+    width: 10em;
+}
+.controlsContainer button:hover {
+    font-size: 15px;
+}
+input[type="color"] {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    height: 5em;
+    padding: 0;
+    width: 5em;
+  }
