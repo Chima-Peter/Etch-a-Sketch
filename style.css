@@ -6,7 +6,6 @@ body {
 }
 .head-container {
     display: flex;
-    flex: auto;
     justify-content: center;   
 }
 .head-container h1 {
@@ -18,13 +17,12 @@ body {
 
 .etchContainer {
     display: flex;
-    flex: auto;
-    padding: 30px 40px;
+    padding: 50px 30px;
 }
 .controlsContainer {
     display: flex;
-    flex: auto;
     flex-direction: column;
+    margin-right: 150px;
 }
 .controlsContainer button {
     background-color: lightcyan;
@@ -46,4 +44,26 @@ input[type="color"] {
     height: 5em;
     padding: 0;
     width: 5em;
+  }
+
+
+
+
+  .mainContainer {
+    display: flex;
+    width: 600px;
+    height: 500px;
+    border: 1px solid black;
+    background-color: white;
+  }
+  .rowContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .colContainer {
+    border: 1px solid black;
+    flex: 1;
+    border: 1px solid black;
   }
