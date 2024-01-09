@@ -1,6 +1,7 @@
 const etchContainer = document.querySelector('#etchContainer');
 const colorBtn = document.querySelector('#colorBtn');
 const rainbowBtn = document.querySelector('#rainbowBtn');
+const eraserBtn = document.querySelector('#eraserBtn');
 // nodes created in dom
 const mainContainer = document.createElement('div');
 
@@ -26,7 +27,7 @@ etchContainer.appendChild(mainContainer);
 colorBtn.addEventListener('click', () => {
     const colorInput = document.querySelector('#colorInput').value;
     hoverOnBox(colorInput);
-})
+});
 
 
 
@@ -34,8 +35,14 @@ rainbowBtn.addEventListener('click', () => {
     let randomColor = Math.floor(Math.random()*16777215).toString(16);
     randomColor = "#" + randomColor;
     hoverOnBox(randomColor);
-})
+});
 
+
+
+
+eraserBtn.addEventListener('click', () => {
+    hoverOnBox('white');
+});
 
 
 
