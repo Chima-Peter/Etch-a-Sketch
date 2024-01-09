@@ -36,7 +36,9 @@ eraserBtn.addEventListener('click', () => {
     hoverOnBox('white');
 });
 
-
+cleanerBtn.addEventListener('click', () => {
+    cleanBoxes();
+});
 
 function hoverOnBox(colorChoice) {
     const boxes = document.querySelectorAll('#colContainer');
@@ -55,5 +57,12 @@ function randomHoverOnBox() {
             randomColor = "#" + randomColor;
             box.style.backgroundColor = randomColor;
         });
+    });
+};
+
+function cleanBoxes() {
+    const boxes = document.querySelectorAll('#colContainer');
+    boxes.forEach(box => {
+        box.style.backgroundColor = 'white';
     });
 };
