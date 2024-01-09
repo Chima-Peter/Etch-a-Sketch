@@ -63,7 +63,5 @@ input[type="color"] {
     height: 100%;
   }
   .colContainer {
-    border: 1px solid black;
     flex: 1;
-    border: 1px solid black;
   }
