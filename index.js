@@ -3,6 +3,7 @@ const colorBtn = document.querySelector('#colorBtn');
 const rainbowBtn = document.querySelector('#rainbowBtn');
 const eraserBtn = document.querySelector('#eraserBtn');
 const cleanerBtn = document.querySelector('#cleanerBtn')
+const numberOfBoxes = document.querySelector('#setBoxCount');
 
 // nodes created in dom
 const mainContainer = document.createElement('div');
@@ -40,6 +41,11 @@ cleanerBtn.addEventListener('click', () => {
     cleanBoxes();
 });
 
+numberOfBoxes.addEventListener('click', () => {
+    const userInput = prompt('Enter size of grid. It must be within 1 to 100.')
+    createGrid(userInput);
+});
+
 function hoverOnBox(colorChoice) {
     const boxes = document.querySelectorAll('#colContainer');
     boxes.forEach(box => {
@@ -66,3 +72,5 @@ function cleanBoxes() {
         box.style.backgroundColor = 'white';
     });
 };
+
+function
