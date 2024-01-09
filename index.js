@@ -8,13 +8,12 @@ const numberOfBoxes = document.querySelector('#setBoxCount');
 // nodes created in dom
 const mainContainer = document.createElement('div');
 
-
-// Creating the default sketch board
 mainContainer.classList.add('mainContainer');
-for (let row = 0; row < 32; row++) {
+for (let row = 0; row < 16; row++) {
     const rowContainer = document.createElement('div');
     rowContainer.classList.add('rowContainer');
-    for (let column = 0; column < 32;column++) {
+    rowContainer.classList.add('rowContainer');
+    for (let column = 0; column < 16; column++) {
         const colContainer = document.createElement('div');
         colContainer.setAttribute('id', 'colContainer');
         colContainer.classList.add('colContainer');
@@ -73,4 +72,33 @@ function cleanBoxes() {
     });
 };
 
-function
+function createGrid(input = 16) {
+    cleanBoxes()
+    for (let row = 0; row < 16; row++) {
+        const rowContainer = document.querySelector('#rowContainer');
+        for (let column = 0; column < 16;column++) {
+            colContainer = document.querySelector("#colContainer");
+            rowContainer.removeChild(colContainer);
+        };
+        mainContainer.removeChild(rowContainer);
+    }
+    etchContainer.removeChild(mainContainer);
+
+    const mainContainer = document.createElement('div');
+    if ((input > 0) && (input < 101)) {
+        mainContainer.classList.add('mainContainer');
+        for (let row = 0; row < input; row++) {
+            const rowContainer = document.createElement('div');
+            rowContainer.classList.add('rowContainer');
+            rowContainer.setAttribute('id', 'rowContainer');
+            for (let column = 0; column < input;column++) {
+                const colContainer = document.createElement('div');
+                colContainer.setAttribute('id', 'colContainer');
+                colContainer.classList.add('colContainer');
+            rowContainer.appendChild(colContainer)
+            };
+            mainContainer.appendChild(rowContainer);
+        };
+        etchContainer.appendChild(mainContainer);
+        };
+};

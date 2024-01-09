@@ -29,7 +29,7 @@ body {
     border: 1px solid black;
     border-radius: 5px;
     height: 3em;
-    margin: 10px 10px 10px 0;
+    margin: 10px 10px 20px 0;
     padding: 0;
     color: black;
     width: 10em;
@@ -44,6 +44,7 @@ input[type="color"] {
     cursor: pointer;
     height: 5em;
     padding: 0;
+    margin-bottom: 20px;
     width: 5em;
   }
 
@@ -67,3 +68,13 @@ input[type="color"] {
   .colContainer {
     flex: 1;
   }
+
+
+  .attribution {
+    font-size: 13px;
+    text-align: center;
+    color: black;
+}
+.attribution a {
+    color: black;
+}
