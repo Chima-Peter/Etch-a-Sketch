@@ -2,6 +2,8 @@ const etchContainer = document.querySelector('#etchContainer');
 const colorBtn = document.querySelector('#colorBtn');
 const rainbowBtn = document.querySelector('#rainbowBtn');
 const eraserBtn = document.querySelector('#eraserBtn');
+const cleanerBtn = document.querySelector('#cleanerBtn')
+
 // nodes created in dom
 const mainContainer = document.createElement('div');
 
@@ -16,29 +18,19 @@ for (let row = 0; row < 32; row++) {
         colContainer.setAttribute('id', 'colContainer');
         colContainer.classList.add('colContainer');
         rowContainer.appendChild(colContainer)
-    }
+    };
     mainContainer.appendChild(rowContainer);
-}
+};
 etchContainer.appendChild(mainContainer);
 
-
-
-// Cause the color mode to call hover function
 colorBtn.addEventListener('click', () => {
     const colorInput = document.querySelector('#colorInput').value;
     hoverOnBox(colorInput);
 });
 
-
-
 rainbowBtn.addEventListener('click', () => {
-    let randomColor = Math.floor(Math.random()*16777215).toString(16);
-    randomColor = "#" + randomColor;
-    hoverOnBox(randomColor);
+    randomHoverOnBox();
 });
-
-
-
 
 eraserBtn.addEventListener('click', () => {
     hoverOnBox('white');
@@ -53,4 +45,15 @@ function hoverOnBox(colorChoice) {
             box.style.backgroundColor = colorChoice;
         });
     });
-}
+};
+
+function randomHoverOnBox() {
+    const boxes = document.querySelectorAll('#colContainer');
+    boxes.forEach(box => {
+        box.addEventListener("mouseover", () => {
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+            randomColor = "#" + randomColor;
+            box.style.backgroundColor = randomColor;
+        });
+    });
+};
